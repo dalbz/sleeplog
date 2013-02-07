@@ -1,0 +1,9 @@
+{
+  "name": "sleeplog",
+  "description": "App to log and view sleep patterns and irregularities for people with parasomnias",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "3.1.0"
+  }
+}
