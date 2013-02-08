@@ -5994,7 +5994,8 @@ body {
     overflow: visible !important;
   }
 }
-h1 {
+h1,
+h2 {
   padding-bottom: .5em;
   font-family: Kavoon, Georgia, serif;
 }

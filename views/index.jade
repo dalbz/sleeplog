@@ -4,18 +4,52 @@
     h1 SleepLog
     p This app is designed to help people with parasomnias log and track patterns and behaviors in their sleep so that they can better manage their sleep disorders
 
-    hr
+  .row 
 
-    form(name="login", action="/login", method="post").form-horizontal
-      .control-group
-        label.control-label Username:
-        .controls
-          input(type="text", name="user").input-medium
+    .span6
 
-      .control-group    
-        label.control-label Password:
-        .controls
-          input(type="text", name="pwd").input-medium
+      h2 Log In 
 
-      .control-group
-        input(type="submit", value="Get Started").btn.controls.btn-primary
+      form(name="login", action="/login", method="post").form-horizontal.well
+
+        .control-group
+          label.control-label Username:
+          .controls
+            input(type="text", name="user").input-medium
+
+        .control-group    
+          label.control-label Password:
+          .controls
+            input(type="password", name="pwd").input-medium
+
+        .control-group
+          input(type="submit", value="Submit").btn.controls.btn-primary
+
+    .span6
+
+      h2 Register
+
+      form(name="register", action="/register", method="post").form-horizontal.well
+
+        .control-group
+          label.control-label Email Address:
+          .controls
+            input(type="text", name="email").input-medium
+
+        .control-group
+          label.control-label Username:
+          .controls
+            input(type="text", name="user").input-medium
+
+        .control-group    
+          label.control-label Password:
+          .controls
+            input(type="password", name="pwd").input-medium
+
+        .control-group    
+          label.control-label Confirm Password:
+          .controls
+            input(type="password", name="pwdConfirm").input-medium
+
+        .control-group
+          input(type="submit", value="Get Started").btn.controls.btn-primary
