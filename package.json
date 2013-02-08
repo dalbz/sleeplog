@@ -1,5 +1,5 @@
 {
-    "name": "application-name"
+    "name": "sleeplog"
   , "version": "0.0.1"
   , "private": true
   , "dependencies": {
@@ -8,5 +8,6 @@
     , "jade": "0.28.1"
     , "mongodb": "1.2.11"
     , "mongoose": "3.5.5"
+    , "bcrypt": "0.7.3"
   }
 }
