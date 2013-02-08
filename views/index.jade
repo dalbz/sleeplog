@@ -1,17 +1,21 @@
 
-.navbar.navbar-fixed-top
-  .navbar-inner
-    .container
-      a.brand(href="#")= title
-      .nav-collapse
-        ul.nav
-          li.active
-            a(href="#") Home
-          li
-            a(href="#about") About
-          li
-            a(href="#contact") Contact
 .container
   .hero-unit
     h1 SleepLog
     p This app is designed to help people with parasomnias log and track patterns and behaviors in their sleep so that they can better manage their sleep disorders
+
+    hr
+
+    form(name="login", action="/login", method="post").form-horizontal
+      .control-group
+        label.control-label Username:
+        .controls
+          input(type="text", name="user").input-medium
+
+      .control-group    
+        label.control-label Password:
+        .controls
+          input(type="text", name="pwd").input-medium
+
+      .control-group
+        input(type="submit", value="Get Started").btn.controls.btn-primary

@@ -4,3 +4,16 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
   body!= body
+
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          a.brand(href="#")= title
+          .nav-collapse
+            ul.nav
+              li.active
+                a(href="#") Home
+              li
+                a(href="#about") About
+              li
+                a(href="#contact") Contact
