@@ -6002,3 +6002,8 @@ h2 {
 .brand {
   font-family: Kavoon, Georgia, serif;
 }
+.hero-unit {
+  background: url(/images/layout/stars.jpg) bottom center no-repeat;
+  color: #fff;
+  text-shadow: #000 0.1em 0.1em 0.3em;
+}
