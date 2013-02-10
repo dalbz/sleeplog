@@ -1,0 +1,57 @@
+
+.container
+
+  .row
+
+    p #{userName}
+    p #{password}
+
+  .row 
+
+    .span6
+
+      h2.light-text Log In 
+
+      form(name="login", action="/login", method="post").form-horizontal.well
+
+        .control-group
+          label.control-label Username:
+          .controls
+            input(type="text", name="user").input-medium
+
+        .control-group    
+          label.control-label Password:
+          .controls
+            input(type="password", name="pwd").input-medium
+
+        .control-group
+          input(type="submit", value="Submit").btn.controls.btn-primary
+
+    .span6
+
+      h2.light-text Register
+
+      form(name="register", action="/register", method="post").form-horizontal.well
+
+        .control-group
+          label.control-label Email Address:
+          .controls
+            input(type="text", name="email").input-medium
+
+        .control-group
+          label.control-label Username:
+          .controls
+            input(type="text", name="user").input-medium
+
+        .control-group    
+          label.control-label Password:
+          .controls
+            input(type="password", name="pwd").input-medium
+
+        .control-group    
+          label.control-label Confirm Password:
+          .controls
+            input(type="password", name="pwdConfirm").input-medium
+
+        .control-group
+          input(type="submit", value="Get Started").btn.controls.btn-primary
