@@ -34,13 +34,20 @@ exports.login = function(req, res){
           
           // login successful - send to dashboard
 
-      });
-  });
+          req.session.user = req.body.user;
 
+          console.log(req.session);
 
-  res.render('login', { title: 'SleepLog',
+          if (isMatch) {
+            res.redirect('/dash');
+          } else {
+            res.render('login', { title: 'SleepLog',
                         userName: req.body.user,
                         password: req.body.pwd });
+          }
+
+      });
+  });
 
   mongoose.connection.close();
 
@@ -76,5 +83,14 @@ exports.register = function(req, res){
                         password: req.body.pwd });
 
   mongoose.connection.close();
+
+};
+
+exports.dash = function(req, res){
+
+  console.log(req.session);
+
+  res.render('dash', { title: 'SleepLog',
+                        userName: req.session.user });
 
 };

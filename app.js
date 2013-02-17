@@ -4,20 +4,34 @@
  */
 
 var express = require('express')
-  , routes = require('./routes');
+  , routes = require('./routes')
+  , MongoStore = require('express-session-mongo');;
 
 var app = module.exports = express.createServer();
 
 // Configuration
 
 app.configure(function(){
+
+  // views
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
+
+  // session support
+  app.use(express.cookieParser());
+
+  // todo - put the secret key in a config file
+  app.use(express.session({ secret: 'secret'
+                            , store: new MongoStore()
+                            , expires: new Date(Date.now() + 86400 * 1000) }));
+
   app.use(express.bodyParser());
   app.use(express.methodOverride());
-app.use(express.compiler({ src : __dirname + '/public', enable: ['less']}));
+  app.use(express.compiler({ src : __dirname + '/public', enable: ['less']}));
   app.use(app.router);
+
   app.use(express.static(__dirname + '/public'));
+
 });
 
 app.configure('development', function(){
@@ -44,6 +58,10 @@ express.compiler.compilers.less.compile = function(str, fn){
 app.get('/', routes.index);
 
 app.post('/login', routes.login);
+
+app.post('/register', routes.register);
+
+app.get('/dash', routes.dash);
 
 app.listen(3000, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
