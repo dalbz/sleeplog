@@ -1,0 +1,51 @@
+
+.container
+
+  .row
+
+    h1 Welcome #{userName}
+
+  .row
+
+    .span6
+
+      h2 Add a new event to your log
+  
+      form(name="addevent", action="/addevent", method="post").form-horizontal.well
+
+        p.alert.alert-info
+          | Enter the date of the night that you went to bed
+
+        .control-group
+          label.control-label Date:
+          .controls
+            input(type="text", name="date")
+
+        p.alert.alert-info 
+          | Select one or more incident types
+
+        .control-group    
+          label.control-label Type(s):
+          .controls
+            textarea(name="type", rows="1")
+
+        p.alert.alert-info 
+          | Describe what happened
+
+        .control-group    
+          label.control-label Description:
+          .controls
+            textarea(name="desc", rows="3")
+
+        p.alert.alert-info 
+          | List any factors that may have influenced your sleep, separated by commas.
+          br
+          | Ex. stress, medication, alcohol, noise level 
+
+        .control-group    
+          label.control-label Factors:
+          .controls
+            textarea(name="tags", rows="2")
+
+        .control-group
+          input(type="submit", value="Submit").btn.controls.btn-primary

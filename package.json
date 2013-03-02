@@ -9,5 +9,6 @@
     , "mongodb": "1.2.11"
     , "mongoose": "3.5.5"
     , "bcrypt": "0.7.3"
+    , "express-session-mongo": ">= 0.0.1"
   }
 }

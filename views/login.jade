@@ -6,6 +6,10 @@
     p #{userName}
     p #{password}
 
+    - if (typeof(status) !== 'undefined'){
+      p.alert.alert-error #{status}
+    -}
+
   .row 
 
     .span6
