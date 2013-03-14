@@ -2,7 +2,13 @@
 html
   head
     title= title
+
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/plugins/datepicker.css')
+
+    script(src='/javascripts/jquery-1.9.1.min.js', type='text/javascript')
+    script(src='/javascripts/bootstrap-datepicker.js', type='text/javascript')
+
   body!= body
 
     .navbar.navbar-fixed-top

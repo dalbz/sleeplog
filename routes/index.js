@@ -112,7 +112,7 @@ exports.dash = function(req, res){
   console.log(req.session);
 
   res.render('dash', { title: 'SleepLog',
-                        userName: req.session.user });
+                       userName: req.session.user });
 
 
 

@@ -46,7 +46,8 @@ script(src='/javascripts/pages/dash.js', type='text/javascript')
         .control-group    
           label.control-label Factors:
           .controls
-            textarea(name="tags", rows="2")
+            textarea#tags(name="tags", rows="2")
+            div#tag-preview
 
         .control-group
           input(type="submit", value="Submit").btn.controls.btn-primary
